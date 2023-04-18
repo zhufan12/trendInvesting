@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: index-gather-store-service
+  redis:
+    port: 6397
+    database: 0
+    host: localhost
+
+server:
+  port:  8001
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
