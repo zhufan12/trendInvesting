@@ -1,9 +1,8 @@
 package org.IndexGatherStoreService.controller;
 
 import org.IndexGatherStoreService.pojo.Index;
-import org.IndexGatherStoreService.server.IndexServer;
+import org.IndexGatherStoreService.server.IndexService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,10 +12,19 @@ import java.util.List;
 public class IndexController {
 
     @Autowired
-    private IndexServer indexServer;
+    private IndexService indexService;
 
+    @GetMapping("/freshCodes")
+    public List<Index> fresh() throws Exception {
+        return indexService.fresh();
+    }
     @GetMapping("/getCodes")
     public List<Index> get() throws Exception {
-        return indexServer.fetch_indexes_from_third_part();
+        return indexService.get();
+    }
+    @GetMapping("/removeCodes")
+    public String remove() throws Exception {
+        indexService.remove();
+        return "remove codes successfully";
     }
 }

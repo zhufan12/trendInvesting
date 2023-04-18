@@ -2,7 +2,7 @@ spring:
   application:
     name: index-gather-store-service
   redis:
-    port: 6397
+    port: 6379
     database: 0
     host: localhost
 
