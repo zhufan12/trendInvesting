@@ -11,6 +11,9 @@
     <module>third-party-index-data</module>
     <module>index-gather-store-service</module>
       <module>index-codes-service</module>
+      <module>index-data-service</module>
+      <module>index-gateway-service</module>
+      <module>trend-trading-backtest-service</module>
   </modules>
 
   <name>trendInvestingParent</name>
