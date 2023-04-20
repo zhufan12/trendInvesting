@@ -11,12 +11,19 @@ spring:
           enabled: true
           lower-case-service-id: false
       routes:
-        - id: API_GATEWAY
+        - id: INDEX-CODES-SERVICE
           uri: lb://INDEX-CODES-SERVICE
           predicates:
             - Path=/api-codes/**
           filters:
             - StripPrefix=1
+        - id: TREND-TRADING-BACKTEST-SERVICE
+          uri: lb://TREND-TRADING-BACKTEST-SERVICE
+          predicates:
+            - Path=/api-backtest/**
+          filters:
+            - StripPrefix=1
+
 
 
 eureka:
