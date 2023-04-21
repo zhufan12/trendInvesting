@@ -23,6 +23,12 @@ spring:
             - Path=/api-backtest/**
           filters:
             - StripPrefix=1
+        - id: VIEW-SERVICE
+          uri: lb://TREND-TRADING-BACKTEST-VIEW
+          predicates:
+            - Path=/api-view/**
+          filters:
+            - StripPrefix=1
 
 
 
