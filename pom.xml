@@ -15,6 +15,7 @@
       <module>index-gateway-service</module>
       <module>trend-trading-backtest-service</module>
       <module>trend-trading-backtest-view</module>
+      <module>index-config-service</module>
   </modules>
 
   <name>trendInvestingParent</name>
